@@ -16,10 +16,13 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
+                <Link className="nav-link" to={"/home"}>Home</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to={"/sign-in"}>Login</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
+                <Link className="nav-link" to={"/"}>Sign up</Link>
               </li>
             </ul>
           </div>
@@ -29,9 +32,9 @@ function App() {
       <div className="auth-wrapper">
         <div className="auth-inner">
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={SignUp} />
             <Route path="/sign-in" component={Login} />
-            <Route path="/sign-up" component={SignUp} />
+            <Route path="/home" component={Home} />
           </Switch>
         </div>
       </div>
